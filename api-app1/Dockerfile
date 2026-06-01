@@ -22,7 +22,7 @@ COPY package.json ./
 COPY index.js ./
 
 # Ensure log directory is writable by the non-root user
-RUN mkdir -p /app/log && chown -R appuser:appuser /app
+RUN mkdir log && chown -R appuser:appuser /app
 
 USER appuser
 
